@@ -25,3 +25,10 @@ All notable changes to IdeaDock are documented in this file.
 ### Added
 - Initial release of IdeaDock native macOS capture client.
 - Global ⌥Space capture overlay.
+
+## [1.2.1] - 2026-10-04
+### Enhanced
+- Refined spring dynamics and snapping physics for edge docks.
+- Added host domain parser for captured URLs.
+- Enhanced thumbnail cache size boundaries and formatting utilities.
+- Finalized repository documentation and CI/CD pipelines.
