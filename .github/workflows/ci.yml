@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-14
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Verify Swift Toolchain
+      run: swift --version
+
+    - name: Run Self-Tests
+      run: ./scripts/test.sh
+
+    - name: Build Application Bundle
+      run: ./scripts/build.sh
