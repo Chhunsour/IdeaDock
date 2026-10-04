@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode & SwiftPM
+.build/
+work/
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+DerivedData/
+.swiftpm/
+Package.resolved
+
+# Artifacts
+*.app
+*.dSYM
+dist/
