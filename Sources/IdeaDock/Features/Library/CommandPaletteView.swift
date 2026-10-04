@@ -122,3 +122,10 @@ struct CommandPaletteView: View {
         }
     }
 }
+
+extension CommandPaletteView {
+    /// Helper to sanitize and normalize search terms.
+    func normalizedQueryString(_ input: String) -> String {
+        input.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    }
+}
