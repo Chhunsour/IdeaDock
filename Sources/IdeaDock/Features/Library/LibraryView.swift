@@ -222,3 +222,10 @@ struct IdeaContextMenu: View {
     }
 }
 extension Notification.Name { static let ideaAddTag = Notification.Name("IdeaDock.addTag") }
+
+extension LibraryView {
+    /// Human-friendly search result count formatter.
+    func formattedResultSummary(_ count: Int) -> String {
+        count == 1 ? "1 note" : "\(count) notes"
+    }
+}
