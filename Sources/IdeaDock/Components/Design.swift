@@ -44,3 +44,10 @@ struct EmptyLibraryView: View {
 // SDK 27 introduces an optional State macro. This alias explicitly selects the
 // native property wrapper, so command-line builds do not require SwiftUIMacros.
 typealias ViewState<Value> = SwiftUI.State<Value>
+
+/// Standardized corner radius tokens across IdeaDock panels and cards.
+enum DockRadius {
+    static let small: CGFloat = 6
+    static let medium: CGFloat = 10
+    static let large: CGFloat = 14
+}
