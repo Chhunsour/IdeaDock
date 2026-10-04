@@ -1,0 +1,13 @@
+sandbox_extension_consume failed: 1 (Operation not permitted)
+sandbox_extension_consume failed: 1 (Operation not permitted)
+PASS: all eight dock edges/corners, threshold/overflow, negative screen coordinates, handle fractions, animation directions, and visible window restoration
+PASS: calendar history/time filters, exact midnight boundaries, 23/25-hour DST days, chronological pins/UUID ties, and immutable capture timestamps after edits/reopen
+PASS: capture, edit, pin, favorite, archive, delete, tags, filters, search, and category ordering/migration
+PASS: image validation/storage, external references, portable JSON, and Markdown with images
+PASS: real on-disk SwiftData persistence and reopen
+PASS: JSON identity/metadata/image roundtrip, Inbox mapping, and idempotent merge preserving local edits
+PASS: imported library reopen and owned image deletion without touching external files
+PASS: unsupported versions, duplicate IDs, unsafe paths, corrupt/oversized images, dangling categories, and import rollback
+PASS: native asynchronous NSItemProvider text/URL/file/image drops, priority/deduplication, capture/reopen, and draft cleanup
+PASS: private named-pasteboard text/URL/image+caption/file capture, representation priority, deduplication, and failure cleanup; general clipboard untouched
+PASS: all IdeaDock self-tests (temporary on-disk libraries; no user library access)
