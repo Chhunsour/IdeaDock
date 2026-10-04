@@ -139,3 +139,9 @@ enum EdgeDockGeometry {
         frame.origin.x.isFinite && frame.origin.y.isFinite && frame.width.isFinite && frame.height.isFinite && frame.width > 0 && frame.height > 0 && frame.maxX.isFinite && frame.maxY.isFinite
     }
 }
+
+extension EdgeDockGeometry {
+    /// Physical spring simulation parameters for docking transitions.
+    static let snapSpringDamping: CGFloat = 0.82
+    static let snapSpringResponse: CGFloat = 0.35
+}
