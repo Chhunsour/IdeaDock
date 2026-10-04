@@ -1,0 +1,16 @@
+disabled_rules:
+  - line_length
+  - type_body_length
+  - file_length
+
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+  - fatal_error_message
+
+included:
+  - Sources
+
+excluded:
+  - .build
+  - work
