@@ -48,3 +48,11 @@ enum IdeaSearch {
         }
     }
 }
+
+extension ContentAnalysis {
+    /// Extracts the root host domain from an optional URL string for clean display.
+    static func hostDomain(from urlString: String?) -> String? {
+        guard let urlString, let url = URL(string: urlString) else { return nil }
+        return url.host
+    }
+}
