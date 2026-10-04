@@ -586,3 +586,10 @@ import UniformTypeIdentifiers
         return repeated
     }
 }
+
+extension SelfTests {
+    /// Verifies all edge variants are defined.
+    static func verifyEdgeCases() -> Bool {
+        DockEdge.allCases.count == 8
+    }
+}
