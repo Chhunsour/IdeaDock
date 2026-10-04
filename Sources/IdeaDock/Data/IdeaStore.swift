@@ -115,3 +115,10 @@ import Observation
         for file in try FileManager.default.contentsOfDirectory(at: root.appendingPathComponent("Attachments"), includingPropertiesForKeys: nil) where !used.contains(file.lastPathComponent) { try FileManager.default.removeItem(at: file) }
     }
 }
+
+extension IdeaStore {
+    /// Verifies store health status and absence of unrecovered persistence errors.
+    var isHealthy: Bool {
+        !lastSaveFailed && errorMessage == nil
+    }
+}
