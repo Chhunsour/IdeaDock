@@ -256,3 +256,13 @@ enum AttachmentError: LocalizedError {
         }
     }
 }
+
+extension AttachmentService {
+    /// Formats raw byte sizes into human-readable strings (e.g., "4.2 MB").
+    static func formatByteCount(_ bytes: Int64) -> String {
+        let formatter = ByteCountFormatter()
+        formatter.allowedUnits = [.useAll]
+        formatter.countStyle = .file
+        return formatter.string(fromByteCount: bytes)
+    }
+}
