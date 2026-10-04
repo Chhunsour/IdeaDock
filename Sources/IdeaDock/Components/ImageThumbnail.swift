@@ -52,3 +52,9 @@ import SwiftUI
         return image
     }
 }
+
+extension ImageThumbnail {
+    /// Maximum dimensions permissible for rendering preview image thumbnails.
+    static let maximumThumbnailWidth: CGFloat = 400
+    static let maximumThumbnailHeight: CGFloat = 400
+}
