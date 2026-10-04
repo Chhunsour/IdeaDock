@@ -355,3 +355,10 @@ import UniformTypeIdentifiers
         return formatter.string(from: date)
     }
 }
+
+extension ExportService {
+    /// Validates whether the given raw dictionary payload matches the IdeaDock schema header.
+    static func isValidFormatHeader(_ json: [String: Any]) -> Bool {
+        return (json["format"] as? String) == "IdeaDock"
+    }
+}
