@@ -593,3 +593,10 @@ extension SelfTests {
         DockEdge.allCases.count == 8
     }
 }
+
+extension SelfTests {
+    /// Verifies opposite edge symmetry for all DockEdge cases.
+    static func verifyOppositeEdgeSymmetry() -> Bool {
+        DockEdge.allCases.allSatisfy { $0.opposite.opposite == $0 }
+    }
+}
