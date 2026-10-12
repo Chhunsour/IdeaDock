@@ -227,3 +227,15 @@ final class Attachment: PersistentModel {
         _$backingData.setValue(forKey: \.typeDescription, to: typeDescription)
     }
 }
+
+extension Idea {
+    /// Total word count in the idea's body content.
+    var wordCount: Int {
+        content.split { $0.isWhitespace || $0.isNewline }.count
+    }
+
+    /// Estimated reading time in seconds (assuming 200 words per minute).
+    var estimatedReadingSeconds: Int {
+        max(1, Int(ceil(Double(wordCount) / (200.0 / 60.0))))
+    }
+}
