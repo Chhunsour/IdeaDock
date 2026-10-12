@@ -61,3 +61,11 @@ struct CaptureTimestamp: View {
         return value
     }
 }
+
+extension CaptureTimestamp {
+    /// Indicates whether the note was modified after its initial capture.
+    var wasEditedAfterCapture: Bool {
+        guard let updatedAt else { return false }
+        return abs(updatedAt.timeIntervalSince(date)) >= 1
+    }
+}
