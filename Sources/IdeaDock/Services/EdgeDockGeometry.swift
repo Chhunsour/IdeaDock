@@ -145,3 +145,19 @@ extension EdgeDockGeometry {
     static let snapSpringDamping: CGFloat = 0.82
     static let snapSpringResponse: CGFloat = 0.35
 }
+
+extension DockEdge {
+    /// Returns the opposite edge or corner on the screen.
+    var opposite: DockEdge {
+        switch self {
+        case .left: return .right
+        case .right: return .left
+        case .top: return .bottom
+        case .bottom: return .top
+        case .topLeft: return .bottomRight
+        case .topRight: return .bottomLeft
+        case .bottomLeft: return .topRight
+        case .bottomRight: return .topLeft
+        }
+    }
+}
