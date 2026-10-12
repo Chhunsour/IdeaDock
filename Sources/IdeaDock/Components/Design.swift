@@ -51,3 +51,10 @@ enum DockRadius {
     static let medium: CGFloat = 10
     static let large: CGFloat = 14
 }
+
+/// Standardized animation durations for UI transitions.
+enum DockMotion {
+    static let quick: Double = 0.15
+    static let standard: Double = 0.25
+    static let gentle: Double = 0.40
+}
