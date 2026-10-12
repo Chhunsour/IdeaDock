@@ -53,3 +53,10 @@ import Observation
         return idea
     }
 }
+
+extension CaptureDraft {
+    /// Character count of the current unsaved draft text.
+    var characterCount: Int {
+        text.count
+    }
+}
