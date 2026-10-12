@@ -32,3 +32,10 @@ All notable changes to IdeaDock are documented in this file.
 - Added host domain parser for captured URLs.
 - Enhanced thumbnail cache size boundaries and formatting utilities.
 - Finalized repository documentation and CI/CD pipelines.
+
+## [1.2.2] - 2026-10-12
+### Added
+- Added word count and reading time estimation helpers to `Idea`.
+- Added fenced markdown code block language identifier detection in `ContentAnalysis`.
+- Added opposite screen edge symmetry helpers to `DockEdge`.
+- Added `docs/Troubleshooting.md` guide for common setup and shortcut questions.
