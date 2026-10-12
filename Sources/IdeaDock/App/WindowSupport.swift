@@ -49,3 +49,10 @@ final class CapturePanel: NSPanel {
     panel.animationBehavior = .utilityWindow
     return panel
 }
+
+extension CapturePanel {
+    /// Ensures the floating panel has a valid positive content size.
+    var hasValidSize: Bool {
+        frame.width > 0 && frame.height > 0
+    }
+}
