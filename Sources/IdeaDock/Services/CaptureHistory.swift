@@ -64,3 +64,10 @@ struct CaptureDaySection: Identifiable {
         return lhs.id.uuidString < rhs.id.uuidString
     }
 }
+
+extension CaptureDaySection {
+    /// Total number of notes contained within this calendar day section.
+    var noteCount: Int {
+        ideas.count
+    }
+}
