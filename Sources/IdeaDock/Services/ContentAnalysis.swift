@@ -56,3 +56,12 @@ extension ContentAnalysis {
         return url.host
     }
 }
+
+extension ContentAnalysis {
+    /// Detects fenced markdown code block language identifier if present.
+    static func codeLanguage(_ text: String) -> String? {
+        guard let range = text.range(of: "```([a-zA-Z0-9_+-]+)", options: .regularExpression) else { return nil }
+        let match = String(text[range]).dropFirst(3)
+        return match.isEmpty ? nil : String(match).lowercased()
+    }
+}
