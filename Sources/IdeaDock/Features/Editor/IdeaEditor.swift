@@ -224,3 +224,10 @@ private struct MarkdownPreview: View {
         }.font(.system(size: 15)).lineSpacing(5).frame(minHeight: 250, alignment: .topLeading)
     }
 }
+
+extension IdeaEditor {
+    /// Formats attachment count badge text for the editor footer.
+    func attachmentCountLabel(_ count: Int) -> String {
+        count == 1 ? "1 attachment" : "\(count) attachments"
+    }
+}
