@@ -1,4 +1,17 @@
-# IdeaDock
+# IdeaDock 💡
+
+<p align="center">
+  <sub>Developed by <strong>Seng Chhunsour</strong></sub>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Chhunsour"><img src="https://img.shields.io/badge/Author-Seng%20Chhunsour-FF5A1F?style=flat-square&logo=github&logoColor=white" alt="Author: Seng Chhunsour" /></a>
+  <img src="https://img.shields.io/badge/Platform-macOS%2014%2B-black?style=flat-square&logo=apple" alt="macOS 14+" />
+  <img src="https://img.shields.io/badge/Swift-5.9%2B%20%7C%206.0-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift 5.9+ / 6.0" />
+  <img src="https://img.shields.io/badge/UI-SwiftUI%20%7C%20AppKit-007AFF?style=flat-square" alt="SwiftUI & AppKit" />
+  <img src="https://img.shields.io/badge/Database-SwiftData-10B981?style=flat-square" alt="SwiftData" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License" /></a>
+</p>
 
 A native macOS 14+ workspace for quick idea capture, a quiet desktop capture bar, and a searchable local library. Built with SwiftUI, AppKit, and SwiftData. No account, external dependencies, analytics, or background clipboard monitoring.
 
@@ -83,3 +96,17 @@ For an isolated native UI library, launch the executable with `--data-dir /priva
 The models implement `PersistentModel` explicitly because the installed command-line toolchain does not include the SwiftData `@Model` macro plugin. Each model defines schema metadata, reflected `_$backingData` and `_$observationRegistrar` fields, and `init(backingData:)`. Constructors initialize raw backing data; runtime getters/setters call the model-level `getValue`/`setValue` helpers inside Observation access/mutation hooks. Calling raw backing-data setters for runtime edits bypasses SwiftData change tracking and loses edits after refresh, so keep that distinction when changing models. Delete code also avoids reading scalar properties from invalidated deleted models.
 
 Optional WidgetKit is deferred in this source delivery because building and installing a widget extension requires a full Xcode application project and signing/provisioning setup.
+
+---
+
+## 👤 Author & Developer
+
+**Developed by Seng Chhunsour**
+- **GitHub:** [@Chhunsour](https://github.com/Chhunsour)
+- **Repository:** [https://github.com/Chhunsour/IdeaDock](https://github.com/Chhunsour/IdeaDock)
+
+---
+
+## 📄 License
+
+Distributed under the [MIT License](LICENSE).
